@@ -1,0 +1,200 @@
+.risk-management {
+  margin-top: 8px;
+  padding: 10px 14px 12px;
+  background: var(--surface);
+  border-radius: 7px;
+}
+.risk-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+  margin-bottom: 17px;
+}
+.risk-tab {
+  flex-shrink: 0;
+  min-height: 36px;
+  border: 0;
+  border-radius: 5px;
+  padding: 0 20px;
+  color: var(--text-navigation);
+  background: transparent;
+}
+.risk-tab:disabled {
+  opacity: 1;
+}
+.risk-tab.active {
+  color: #fff;
+  background: var(--primary);
+  box-shadow: inset 0 0 0 3px var(--primary-inset);
+}
+.collateral-panel {
+  padding: 0;
+}
+.collateral-title {
+  margin: 0;
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: var(--surface-header);
+  border: 1px solid #e4ebfa;
+  border-radius: 4px;
+  color: var(--text-heading);
+}
+.collateral-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 8px 12px;
+}
+.collateral-search {
+  display: flex;
+  gap: 6px;
+  min-width: 0;
+}
+.collateral-search-input {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  max-width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.collateral-search-input input {
+  width: 100%;
+  min-width: 0;
+  height: 32px;
+  border: 0;
+  padding: 0 10px;
+  color: var(--text-body);
+  background: var(--surface);
+}
+.collateral-search-input input::placeholder {
+  color: var(--text-label);
+}
+.collateral-search-input button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.risk-icon-button {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 34px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--primary);
+  color: #fff;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.risk-icon-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.collateral-grid {
+  border: 1px solid var(--border);
+}
+.collateral-grid .data-table {
+  min-width: 1250px;
+}
+.collateral-grid .data-table th,
+.collateral-grid .data-table td {
+  height: 34px;
+  padding: 6px 12px;
+  border-right: 1px solid var(--border);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.collateral-grid .data-table thead th {
+  background: var(--surface-table-header);
+}
+.collateral-grid .data-table th:last-child,
+.collateral-grid .data-table td:last-child {
+  border-right: 0;
+}
+.collateral-grid .data-table tr:last-child td {
+  border-bottom: 0;
+}
+.collateral-grid .data-table .collateral-empty {
+  height: 72px;
+  text-align: center;
+  color: var(--text-muted);
+}
+.collateral-pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 12px 4px 0;
+  color: var(--text-table);
+}
+.collateral-pagination select {
+  height: 32px;
+  min-width: 62px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-table);
+  background: var(--surface);
+  padding: 0 8px;
+}
+.collateral-page-buttons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 8px;
+}
+.collateral-page-buttons button,
+.collateral-current-page {
+  width: 30px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+}
+.collateral-page-buttons button {
+  border: 0;
+  background: var(--surface-header);
+  color: var(--text-navigation);
+  cursor: pointer;
+}
+.collateral-page-buttons button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.collateral-current-page {
+  color: #fff;
+  background: var(--primary);
+  font-weight: 500;
+}
+.collateral-search-input:focus-within {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+.collateral-search-input input:focus {
+  outline: 0;
+}
+@media (max-width: 650px) {
+  .risk-management {
+    padding-inline: 8px;
+  }
+  .collateral-toolbar {
+    padding-inline: 0;
+  }
+  .collateral-search-input {
+    width: 190px;
+  }
+  .collateral-pagination {
+    flex-wrap: wrap;
+  }
+}

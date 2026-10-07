@@ -1,0 +1,93 @@
+.customer-overview {
+  margin-top: 8px;
+  padding: 10px 14px 8px;
+  background: var(--surface);
+  border-radius: 7px;
+}
+.overview-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 17px;
+  overflow-x: auto;
+}
+.overview-tab {
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 5px;
+  height: 36px;
+  padding: 0 24px;
+  background: transparent;
+  color: var(--text-navigation);
+  cursor: pointer;
+}
+.overview-tab.active {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: inset 0 0 0 3px var(--primary-inset);
+}
+.representative-section + .representative-section {
+  margin-top: 10px;
+}
+.representative-heading {
+  margin: 0 0 3px;
+}
+.representative-heading button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  min-height: 34px;
+  padding: 0 14px;
+  border: 1px solid #e4ebfa;
+  border-radius: 4px;
+  background: var(--surface-header);
+  color: var(--text-heading);
+  cursor: pointer;
+  text-align: left;
+}
+.representative-heading svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.representative-heading button:hover:not(:disabled) {
+  filter: none;
+  background: #e8efff;
+}
+.representative-table {
+  margin: 0 5px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.representative-table .data-table {
+  min-width: 900px;
+}
+.representative-table .data-table th,
+.representative-table .data-table td {
+  height: 32px;
+  padding: 0 17px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.representative-table .data-table thead th {
+  background: var(--surface-table-header);
+  color: var(--text-heading);
+}
+.representative-table .data-table th:last-child,
+.representative-table .data-table td:last-child {
+  border-right: 0;
+}
+.representative-table .data-table tr:last-child td {
+  border-bottom: 0;
+}
+@media (max-width: 650px) {
+  .customer-overview {
+    padding-inline: 8px;
+  }
+  .overview-tab {
+    padding-inline: 14px;
+  }
+  .representative-table {
+    margin-inline: 0;
+  }
+}

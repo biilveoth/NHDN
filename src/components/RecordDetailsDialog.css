@@ -1,0 +1,93 @@
+.record-dialog {
+  position: fixed;
+  top: 9px;
+  margin: 0 auto;
+  padding: 0;
+  width: calc(100% - 12px);
+  max-width: 1600px;
+  max-height: calc(100dvh - 18px);
+  border: 1px solid #727272;
+  border-radius: 5px;
+  background: #fff;
+  color: #20232a;
+  overflow-y: auto;
+}
+.record-dialog::backdrop {
+  background: rgb(0 0 0 / 52%);
+}
+.record-dialog__header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 13px;
+  min-height: 48px;
+  border-bottom: 1px solid #ededf3;
+}
+.record-dialog__header h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+.record-dialog__close {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 0;
+  color: #363636;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+.record-dialog__fields {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 21px 24px;
+  padding: 17px 27px 32px;
+  margin: 0;
+}
+.record-dialog__fields dt {
+  color: #8580b2;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.record-dialog__fields dd {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  overflow-wrap: anywhere;
+}
+.record-dialog__footer {
+  display: flex;
+  justify-content: flex-end;
+  background: #f5f5fb;
+  padding: 16px;
+  min-height: 65px;
+}
+.record-dialog__footer button {
+  border: 0;
+  border-radius: 3px;
+  background: #ff7b8c;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 9px 16px;
+  cursor: pointer;
+}
+@media (max-width: 760px) {
+  .record-dialog__fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 17px;
+    gap: 20px 16px;
+  }
+}
+@media (max-width: 420px) {
+  .record-dialog__fields {
+    grid-template-columns: 1fr;
+  }
+}
