@@ -3,7 +3,7 @@ export const representativeColumns = [
   { key: "birthday", label: "Ngày sinh", width: "12%" },
   { key: "phone", label: "Số điện thoại", width: "15%" },
   { key: "identityType", label: "Loại giấy tờ", width: "12%" },
-  { key: "identity", label: "Giấy tờ tùy thân", width: "17%" },
+  { key: "identity", label: "Số giấy tờ", width: "17%" },
   { key: "email", label: "Email", width: "24%" },
 ];
 
