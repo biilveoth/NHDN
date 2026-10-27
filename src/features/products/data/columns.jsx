@@ -13,7 +13,7 @@ export const depositColumns = [
 export const fxColumns = [
   c("contract", "Số hợp đồng", "14%"),
   c("currency", "Loại tiền tệ", "10%"),
-  c("balance", "Số dư nguyên tệ", "13%", "right"),
+  c("balance", "Số tiền nguyên tệ", "13%", "right"),
   c("converted", "Số dư quy đổi (VNĐ)", "16%", "right"),
   c("profit", "Lợi nhuận", "17%", "right"),
   c("transactionDate", "Ngày thực hiện giao dịch", "20%", "center"),
@@ -22,7 +22,7 @@ export const fxColumns = [
 export const lcColumns = [
   c("contract", "Số hợp đồng", "14%"),
   c("currency", "Loại tiền tệ", "10%"),
-  c("balance", "Số dư nguyên tệ", "13%", "right"),
+  c("balance", "Doanh số (mUSD)", "13%", "right"),
   c("revenue", "Doanh thu", "23%", "right"),
   c("transactionDate", "Ngày thực hiện giao dịch", "30%", "center"),
   c("date", "Ngày dữ liệu", "10%", "center"),
