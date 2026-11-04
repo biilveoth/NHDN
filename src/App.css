@@ -42,6 +42,10 @@
   margin: 6px 0;
 }
 .summary-card {
+  border: 1px solid transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
   min-width: 0;
   height: 68px;
   display: flex;
@@ -50,6 +54,10 @@
   padding: 8px 4px 8px 18px;
   border-radius: 7px;
   background: #fff;
+}
+.summary-card.is-selected {
+  border-color: var(--primary);
+  background: var(--surface-header);
 }
 .summary-icon {
   flex: 0 0 46px;
@@ -102,12 +110,14 @@
   font-weight: 700;
   line-height: 15px;
 }
-.summary-heading h2 {
+.summary-title {
   font-size: 12px;
+  font-weight: 700;
   margin: 0;
   color: #071a51;
 }
-.summary-content p {
+.summary-value {
+  display: block;
   margin: 0;
   font-size: 10.5px;
   line-height: 15px;
@@ -353,7 +363,7 @@ button:hover:not(:disabled) {
     padding-left: 10px;
     gap: 8px;
   }
-  .summary-content p {
+  .summary-value {
     font-size: 10px;
   }
 }
@@ -381,11 +391,11 @@ button:hover:not(:disabled) {
   .summary-icon svg {
     width: 24px;
   }
-  .summary-content p {
+  .summary-value {
     white-space: normal;
     font-size: 10px;
   }
-  .summary-heading h2 {
+  .summary-title {
     font-size: 11px;
   }
   .section-body {

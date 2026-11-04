@@ -1,23 +1,27 @@
 export const summaries = [
   {
+    type: "deposits",
     icon: "coins",
     count: "32",
     title: "Huy động vốn",
     value: "Tổng: 2.647.336,17 tỷ đ",
   },
   {
+    type: "credit",
     icon: "credit",
     count: "4",
     title: "Tín dụng",
     value: "Tổng dư nợ quy đổi: 1.530.000 tỷ đ",
   },
   {
+    type: "guarantee",
     icon: "shield",
     count: "10",
     title: "Bảo lãnh",
     value: "Tổng số dư quy đổi: 4.504.552,8 tỷ đ",
   },
   {
+    type: "lc",
     icon: "doc",
     count: "18",
     title: "LC & TTQT",
@@ -25,6 +29,7 @@ export const summaries = [
     note: "(Lũy kế năm)",
   },
   {
+    type: "fx",
     icon: "chart",
     count: "120",
     title: "FX",
@@ -32,6 +37,7 @@ export const summaries = [
     note: "(Lũy kế năm)",
   },
   {
+    type: "digital",
     icon: "phone",
     count: "7",
     title: "Kênh số",

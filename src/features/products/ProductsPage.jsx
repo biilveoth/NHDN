@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useId, useState } from "react";
 import ProductSummary from "./components/ProductSummary";
 import GroupedProductTable from "./components/GroupedProductTable";
 import ProductSection from "../../components/ProductSection";
@@ -27,7 +27,6 @@ const sections = [
     title: "Huy động vốn",
     groups: depositGroups,
     columns: depositColumns,
-    defaultOpen: true,
   },
   {
     type: "credit",
@@ -46,39 +45,42 @@ const sections = [
     title: "FX",
     columns: fxColumns,
     groups: fxGroups,
-    defaultOpen: true,
   },
   {
     type: "lc",
     title: "LC & TTQT",
     columns: lcColumns,
     rows: lcRows,
-    defaultOpen: true,
   },
   {
     type: "digital",
     title: "Kênh số",
     columns: digitalColumns,
     rows: digitalRows,
-    defaultOpen: true,
   },
 ];
 
 export default function ProductsPage() {
+  const [selectedType, setSelectedType] = useState("deposits");
+  const detailsId = useId();
   const [details, setDetails] = useState(null);
   const closeDetails = useCallback(() => setDetails(null), []);
   return (
     <section aria-label="Sản phẩm dịch vụ">
-      <ProductSummary />
-      <div className="product-sections">
-        {sections.map((section) => {
+      <ProductSummary
+        selectedType={selectedType}
+        onSelect={setSelectedType}
+        detailsId={detailsId}
+      />
+      <div className="product-sections" id={detailsId}>
+        {sections.filter((section) => section.type === selectedType).map((section) => {
           const openRecord = (row, group) =>
             setDetails(getContractDetails(section.type, row, group));
           return (
             <ProductSection
               key={section.type}
               title={section.title}
-              defaultOpen={section.defaultOpen}
+              defaultOpen
               onExport={() => exportExcel(section)}
             >
               {section.groups ? (
