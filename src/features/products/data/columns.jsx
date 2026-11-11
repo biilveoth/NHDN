@@ -11,10 +11,10 @@ export const depositColumns = [
   c("date", "Ngày dữ liệu", "11%", "center"),
 ];
 export const fxColumns = [
-  c("contract", "Số hợp đồng", "14%"),
+  c("contract", "Mã giao dịch", "14%"),
   c("currency", "Loại tiền tệ", "10%"),
   c("balance", "Số tiền nguyên tệ", "13%", "right"),
-  c("converted", "Số dư quy đổi (VNĐ)", "16%", "right"),
+  c("converted", "Doanh số quy đổi (VNĐ)", "16%", "right"),
   c("profit", "Lợi nhuận", "17%", "right"),
   c("transactionDate", "Ngày thực hiện giao dịch", "20%", "center"),
   c("date", "Ngày dữ liệu", "10%", "center"),

@@ -322,6 +322,9 @@
 .summary-content .status > span {
   padding: 0;
 }
+.summary-content .status--info {
+  background: #e3efff;
+}
 .empty-state {
   padding: 12px;
   margin: 0;

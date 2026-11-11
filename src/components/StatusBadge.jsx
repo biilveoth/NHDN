@@ -2,7 +2,7 @@ export default function StatusBadge({ value }) {
   const tone =
     value === "Chưa đăng ký"
       ? "danger"
-      : value === "Gói Business Plus"
+      : value === "Gói Business Plus" || value === "Gói Business"
         ? "info"
         : "success";
   return (

@@ -41,7 +41,7 @@ export const summaries = [
     icon: "phone",
     count: "7",
     title: "Kênh số",
-    value: "Đang hoạt động",
+    value: "Gói Business",
     status: true,
   },
 ];
