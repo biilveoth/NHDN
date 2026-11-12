@@ -11,4 +11,4 @@ export const customerTabs = [
   { id: "additional", label: "Thông tin khai thác thêm" },
 ];
 
-export const availableCustomerPages = ["overview", "products", "risk"];
+export const availableCustomerPages = ["overview", "products", "risk", "lpb"];

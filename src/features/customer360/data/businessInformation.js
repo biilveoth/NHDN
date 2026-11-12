@@ -11,7 +11,7 @@ export const businessInformationColumns = [
       label: "Xếp hạng tín dụng tại thời điểm gần nhất",
       value: "B+",
     },
-    { key: "cicDebtGroup", label: "Nhóm nợ max theo CIC", value: null },
+    { key: "cicDebtGroup", label: "Nhóm nợ max theo CIC", value: "Nhóm 1 - Nợ đủ tiêu chuẩn" },
     {
       key: "totalDebt",
       label: "Tổng dư nợ và dư trái phiếu",
@@ -22,7 +22,7 @@ export const businessInformationColumns = [
       label: "Doanh số XNK (TCHQ)",
       value: "125.000.000.000 VND",
     },
-    { key: "importVolume", label: "Doanh số nhập khẩu", value: null },
+    { key: "importVolume", label: "Doanh số nhập khẩu", value: "75.000.000.000 VND" },
   ],
   [
     {
@@ -30,17 +30,17 @@ export const businessInformationColumns = [
       label: "Thời gian quan hệ với LP",
       value: "16 năm 10 tháng",
     },
-    { key: "cicCheckedAt", label: "Thời điểm check CIC", value: null },
+    { key: "cicCheckedAt", label: "Thời điểm check CIC", value: "11/11/2026" },
     {
       key: "preRiskRevenue",
       label: "Doanh thu trước rủi ro mang lại cho LP",
-      value: null,
+      value: "76.000.000.000 VND",
     },
     {
       key: "latestToi",
       label: "TOI khách hàng mang lại năm gần nhất",
       value: "8.912.400.000 VND",
     },
-    { key: "exportVolume", label: "Doanh số xuất khẩu", value: null },
+    { key: "exportVolume", label: "Doanh số xuất khẩu", value: "50.000.000.000 VND" },
   ],
 ];

@@ -8,6 +8,7 @@ import {
 } from "./data/customerNavigation";
 import RiskManagementPage from "./features/risk/RiskManagementPage";
 import ProductsPage from "./features/products/ProductsPage";
+import LpbRelationshipPage from "./features/lpb/LpbRelationshipPage";
 import "./App.css";
 
 function readPage() {
@@ -42,6 +43,9 @@ export default function App() {
       </div>
       <div hidden={page !== "risk"}>
         <RiskManagementPage />
+      </div>
+      <div hidden={page !== "lpb"}>
+        <LpbRelationshipPage />
       </div>
     </main>
   );

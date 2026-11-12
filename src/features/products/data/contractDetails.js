@@ -107,10 +107,6 @@ export function getContractDetails(type, row, group) {
     };
   if (type === "fx") {
     const deal = fxDetailsById[row[0]];
-    const volume = Number(row[3].replaceAll(",", ""));
-    const profit = Number(row[4].replaceAll(",", ""));
-    const margin =
-      volume > 0 ? `${((profit / volume) * 100).toFixed(2)}%` : "---";
     return {
       title: `${row[0]} - FX`,
       fields: [
@@ -126,7 +122,7 @@ export function getContractDetails(type, row, group) {
           deal?.usdVolume ? money(deal.usdVolume, "USD") : "---",
         ],
         ["Lợi nhuận", money(row[4])],
-        ["Margin", margin],
+        ["Margin", "12"],
         [
           "Giao dịch đảo ngược",
           deal?.reversed == null ? "---" : deal.reversed ? "True" : "False",
