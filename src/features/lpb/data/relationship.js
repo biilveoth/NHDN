@@ -102,13 +102,12 @@ incomeTotals.toi = ["2,92%", "2,85%", "2,76%", "2,70%", "2,55%"];
 
 export const incomeGroups = incomeDefinitions.map((group) => ({
   ...group,
-  values: incomeTotals[group.id],
   ...(group.children ? {
     children: group.children.map((title, index) => ({ title, values: incomeSamples[group.id][index] })),
-  } : {}),
+  } : { values: incomeTotals[group.id] }),
 }));
 
 export const incomeExportRows = incomeGroups.flatMap((group) => [
-  [group.title, ...group.values],
+  [group.title, ...(group.values ?? Array(incomeColumns.length - 1).fill(""))],
   ...(group.children || []).map((row) => [row.title, ...row.values]),
 ]);

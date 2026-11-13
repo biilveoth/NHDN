@@ -1,4 +1,4 @@
-import { fxDetailsById } from "./fxDetails";
+import { fxDetailsById, fxProductTitles } from "./fxDetails";
 import { lcDetailsById } from "./lcDetails";
 
 const customer = [
@@ -108,7 +108,7 @@ export function getContractDetails(type, row, group) {
   if (type === "fx") {
     const deal = fxDetailsById[row[0]];
     return {
-      title: `${row[0]} - FX`,
+      title: fxProductTitles[deal?.product ?? group?.title] ?? `${row[0]} - FX`,
       fields: [
         ["Mã khách hàng", customer[0][1]],
         ["Tên khách hàng", deal?.customerName ?? customer[1][1]],
@@ -125,7 +125,7 @@ export function getContractDetails(type, row, group) {
         ["Margin", "12"],
         [
           "Giao dịch đảo ngược",
-          deal?.reversed == null ? "---" : deal.reversed ? "True" : "False",
+          deal?.reversed == null ? "---" : deal.reversed ? "Có" : "Không",
         ],
         ["Sản phẩm", deal?.product ?? "---"],
         ["Ngày deal", date(row[5])],
@@ -135,7 +135,7 @@ export function getContractDetails(type, row, group) {
   }
   const contract = lcDetailsById[row[0]];
   return {
-    title: `${row[0]} - LC & TTQT`,
+    title: "TTQT - THANH TOÁN QUỐC TẾ",
     fields: [
       ["Mã khách hàng", customer[0][1]],
       ["Tên khách hàng", contract?.customerName ?? customer[1][1]],
